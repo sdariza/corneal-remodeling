@@ -4,7 +4,7 @@ import NavButton from "../NavButton";
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <div className="grid flex flex-col min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100">
+        <div className="grid flex flex-col min-h-screen from-slate-50 via-blue-50/30 to-slate-100">
             <header className="border-b-2 border-blue-600/20 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-blue-500/5">
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex items-center justify-between">
