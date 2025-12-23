@@ -4,7 +4,7 @@ import NavButton from "../NavButton";
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <div className="grid flex flex-col min-h-screen from-slate-50 via-blue-50/30 to-slate-100">
+        <div className="flex flex-col min-h-screen from-slate-50 via-blue-50/30 to-slate-100">
             <header className="border-b-2 border-blue-600/20 bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-blue-500/5">
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex items-center justify-between">
@@ -27,7 +27,7 @@ const Layout = () => {
                         </Link>
 
                         {/* DESKTOP NAV */}
-                        <nav className="hidden md:flex items-center gap-2">
+                        <nav className="hidden lg:flex items-center gap-1">
                             <NavButton path="/queratocono" text="Queratocono" />
                             <NavButton path="/queratoglobo" text="Queratoglobo" />
                             <NavButton path="/ectasia-post-lasik" text="Ectasia Post LASIK" />
@@ -38,7 +38,7 @@ const Layout = () => {
                         {/* MOBILE BUTTON */}
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 p-2 text-slate-700 hover:bg-slate-100 transition"
+                            className="lg:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 p-2 text-slate-700 hover:bg-slate-100 transition"
                             aria-label="Abrir menú"
                         >
                             {/* Icono hamburguesa */}
@@ -60,7 +60,7 @@ const Layout = () => {
 
                     {/* MOBILE MENU */}
                     {menuOpen && (
-                        <nav className="md:hidden mt-6 flex flex-col gap-2 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-lg">
+                        <nav className="lg:hidden mt-6 flex flex-col gap-2 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-lg">
                             <NavButton path="/queratocono" text="Queratocono" />
                             <NavButton path="/queratoglobo" text="Queratoglobo" />
                             <NavButton path="/ectasia-post-lasik" text="Ectasia Post LASIK" />
@@ -71,13 +71,13 @@ const Layout = () => {
                 </div>
             </header>
 
-            <main className="grid flex-grow container mx-auto px-6 py-12">
+            <main className="flex-grow container mx-auto px-6 py-12">
                 <div className="max-w-6xl mx-auto">
                     <Outlet />
                 </div>
             </main>
 
-            <footer className="border-t border-slate-200 bg-white/50 backdrop-blur">
+            <footer className="mt-auto border-t border-slate-200 bg-white/50 backdrop-blur">
                 <div className="container mx-auto px-6 py-8">
                     <p className="text-center text-sm text-slate-600">
                         © 2025 Corneal Remodeling System - Diagnóstico médico profesional

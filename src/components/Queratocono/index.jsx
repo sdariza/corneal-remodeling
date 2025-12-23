@@ -45,7 +45,7 @@ const Queratocono = () => {
                 </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 <div className="space-y-6">
                     <Card className="p-6 bg-white/80 backdrop-blur border-slate-200/60 shadow-lg shadow-slate-200/50">
                         <div className="flex items-center gap-3 mb-6">
@@ -74,13 +74,13 @@ const Queratocono = () => {
                                     onValueChange={(value) => updateField("ojo", value)}
                                     className="flex gap-4"
                                 >
-                                    <div className="flex px-15 items-center space-x-2 flex-1">
+                                    <div className="flex px-4 items-center space-x-2 flex-1">
                                         <RadioGroupItem value="izquierdo" id="izquierdo" />
                                         <Label htmlFor="izquierdo" className="cursor-pointer font-normal">
                                             Izquierdo
                                         </Label>
                                     </div>
-                                    <div className="flex px-15 items-center space-x-2 flex-1">
+                                    <div className="flex px-4 items-center space-x-2 flex-1">
                                         <RadioGroupItem value="derecho" id="derecho" />
                                         <Label htmlFor="derecho" className="cursor-pointer font-normal">
                                             Derecho
